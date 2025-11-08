@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouhend Ines Djihen - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #eef2f7;
+            color: #2b2d42;
+        }
+
+        /* Navbar */
+        header {
+            background: rgba(13, 27, 42, 0.9);
+            padding: 18px 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #dce3ea;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+            font-weight: 300;
+        }
+
+        .nav-links a:hover {
+            color: #8bd3ff;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            padding-top: 140px;
+        }
+
+        .hero h2 {
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #e5e5e5;
+        }
+
+        .hero span {
+            color: #ffcf6f;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 22px;
+            max-width: 750px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            background: #ffcf6f;
+            color: #0d1b2a;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* Section styling */
+        section {
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: #1e2a38;
+            font-weight: 700;
+            text-align: center; /* ensure title is centered */
+        }
+
+        /* About section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .about-pic {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-text {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 1.7;
+            font-size: 19px;
+            color: #333;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* Projects */
+        .project-container {
+            display: flex;
+            justify-content: center; /* center all projects */
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: 0.4s ease;
+            width: 300px; /* fixed width for all projects */
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #1b263b;
+        }
+
+        /* Contact */
+        .contact p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                max-width: 90%;
+            }
+
+            .project-card {
+                width: 90%; /* make project cards fit smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Ines Djihen</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <h2>Hello, I'm <span>Bouhend Ines Djihen</span></h2>
+        <p>Network Engineering student passionate about Networking, Cybersecurity, Front-End Development, and Creative Design.</p>
+        <a href="#projects" class="btn">See My Work</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="me.jpg" class="about-pic" alt="Ines Photo">
+            <div class="about-text">
+                I'm a 4th-year Network Engineering student with a strong passion for technology.  
+                I love working in the fields of networking, cybersecurity, and front-end development.  
+                I also enjoy designing modern logos and exploring the creative side of digital design.  
+                <br><br>
+                I'm a curious person who loves learning — whether it's within the IT world or far beyond it.  
+                I constantly challenge myself to grow, improve my skills, and build meaningful digital experiences.
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="1.jpeg" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+                <h3>Food Lover</h3>
+                <p>Website for restaurant</p>
+            </div>
+
+            <div class="project-card">
+                <img src="2.png" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+                <h3>Saudi Visa</h3>
+                <p>Website for visa application</p>
+            </div>
+
+            <div class="project-card">
+                <img src="3.png" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+                <h3>EngiBrain</h3>
+                <p>Education platform</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+  <!-- Contact -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:inesdjihen2005@gmail.com">inesdjihen2005@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/inesdjihen-b-a0920931a/" target="_blank">https://www.linkedin.com/in/bouhend-ines-djihen</a></p>
+</section>
+
+
+</body>
+</html>
